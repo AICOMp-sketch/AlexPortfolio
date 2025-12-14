@@ -1,0 +1,223 @@
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* 3D Scene */
+        .perspective-container {
+            perspective: 1000px;
+        }
+        
+        /* Floating 3D Cube */
+        .cube-container {
+            width: 150px;
+            height: 150px;
+            perspective: 800px;
+        }
+        
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateCube 15s infinite linear;
+        }
+        
+        .cube-face {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 2px solid rgba(139, 92, 246, 0.5);
+            background: rgba(139, 92, 246, 0.1);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        .front { transform: translateZ(75px); }
+        .back { transform: rotateY(180deg) translateZ(75px); }
+        .right { transform: rotateY(90deg) translateZ(75px); }
+        .left { transform: rotateY(-90deg) translateZ(75px); }
+        .top { transform: rotateX(90deg) translateZ(75px); }
+        .bottom { transform: rotateX(-90deg) translateZ(75px); }
+        
+        @keyframes rotateCube {
+            0% { transform: rotateX(0deg) rotateY(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+        
+        /* 3D Card Effect */
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+        
+        .card-3d:hover {
+            transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+        }
+        
+        .card-3d-reverse:hover {
+            transform: rotateY(-10deg) rotateX(-5deg) scale(1.05);
+        }
+        
+        /* Glowing effect */
+        .glow {
+            box-shadow: 0 0 60px rgba(139, 92, 246, 0.3);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+        }
+        
+        /* Floating animation */
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .float-delay-1 { animation-delay: -2s; }
+        .float-delay-2 { animation-delay: -4s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* 3D Tilt Cards */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+        
+        .tilt-card-inner {
+            transition: transform 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .tilt-card:hover .tilt-card-inner {
+            transform: translateZ(30px);
+        }
+        
+        .tilt-card:hover .tilt-icon {
+            transform: translateZ(50px);
+        }
+        
+        .tilt-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        /* Parallax Orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        /* Project Cards 3D Flip */
+        .flip-card {
+            perspective: 1000px;
+            height: 300px;
+        }
+        
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 1rem;
+        }
+        
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+        
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #8b5cf6, #ec4899);
+            border-radius: 4px;
+        }
+        
+        /* Nav active state */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, #8b5cf6, #ec4899);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* 3D Text */
+        .text-3d {
+            text-shadow: 
+                1px 1px 0 #8b5cf6,
+                2px 2px 0 #7c3aed,
+                3px 3px 0 #6d28d9,
+                4px 4px 0 #5b21b6,
+                5px 5px 10px rgba(0,0,0,0.5);
+        }
+        
+        /* Skill bars */
+        .skill-bar {
+            transform-style: preserve-3d;
+            transform: rotateX(10deg);
+        }
+        
+        .skill-progress {
+            transition: width 1.5s ease-out;
+        }
