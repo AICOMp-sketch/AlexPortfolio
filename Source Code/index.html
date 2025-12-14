@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Portfolio | Creative Developer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"></link>
+</head>
+<body class="text-white">
+    <!-- Animated Background Orbs -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="orb w-96 h-96 bg-purple-600 top-1/4 -left-48 float"></div>
+        <div class="orb w-80 h-80 bg-pink-600 bottom-1/4 -right-40 float float-delay-1"></div>
+        <div class="orb w-64 h-64 bg-blue-600 top-3/4 left-1/3 float float-delay-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Portfolio
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-purple-400 transition-colors">Home</a>
+                <a href="#about" class="nav-link hover:text-purple-400 transition-colors">About</a>
+                <a href="#skills" class="nav-link hover:text-purple-400 transition-colors">Skills</a>
+                <a href="#projects" class="nav-link hover:text-purple-400 transition-colors">Projects</a>
+                <a href="#contact" class="nav-link hover:text-purple-400 transition-colors">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black/90 backdrop-blur-lg">
+            <div class="flex flex-col items-center py-4 space-y-4">
+                <a href="#home" class="hover:text-purple-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="perspective-container">
+                <div class="reveal">
+                    <p class="text-purple-400 text-lg mb-4 tracking-wider">Welcome to my world</p>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 text-3d">
+                        Hi, I'm <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">Alex</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-300 mb-6">Creative Developer & Designer</h2>
+                    <p class="text-gray-400 text-lg mb-8 max-w-lg">
+                        I craft immersive digital experiences with cutting-edge technology and stunning 3D visuals that bring ideas to life.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all transform hover:scale-105">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="px-8 py-3 border border-purple-500 rounded-full font-semibold hover:bg-purple-500/20 transition-all">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3D Cube -->
+            <div class="flex justify-center items-center">
+                <div class="cube-container float">
+                    <div class="cube">
+                        <div class="cube-face front">💻</div>
+                        <div class="cube-face back">🎨</div>
+                        <div class="cube-face right">🚀</div>
+                        <div class="cube-face left">⚡</div>
+                        <div class="cube-face top">✨</div>
+                        <div class="cube-face bottom">🔮</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-purple-400 rounded-full flex justify-center pt-2">
+                <div class="w-1.5 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 glow-text">About Me</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- 3D Image Frame -->
+                <div class="reveal perspective-container flex justify-center">
+                    <div class="relative card-3d">
+                        <div class="w-80 h-80 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 p-1 glow">
+                            <div class="w-full h-full rounded-2xl bg-gray-900 flex items-center justify-center overflow-hidden">
+                                <div class="text-center">
+                                    <div class="text-8xl mb-4">👨‍💻</div>
+                                    <p class="text-gray-400">Creative Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating elements -->
+                        <div class="absolute -top-6 -right-6 w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center text-2xl float">🎯</div>
+                        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-pink-600 rounded-lg flex items-center justify-center text-2xl float float-delay-1">💡</div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <h3 class="text-2xl font-semibold mb-6 text-purple-300">Passionate about creating amazing experiences</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        With over 5 years of experience in web development and design, I specialize in creating immersive digital experiences that captivate users. My expertise spans from front-end development to 3D graphics and interactive animations.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        I believe in the power of design thinking and user-centered approaches to solve complex problems. Every project is an opportunity to push boundaries and create something extraordinary.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="text-center p-4 bg-white/5 rounded-xl card-3d">
+                            <div class="text-3xl font-bold text-purple-400">50+</div>
+                            <div class="text-gray-400 text-sm">Projects</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/5 rounded-xl card-3d">
+                            <div class="text-3xl font-bold text-pink-400">30+</div>
+                            <div class="text-gray-400 text-sm">Clients</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/5 rounded-xl card-3d">
+                            <div class="text-3xl font-bold text-blue-400">5+</div>
+                            <div class="text-gray-400 text-sm">Years</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 glow-text">My Skills</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="reveal tilt-card group" onmousemove="tiltCard(event, this)" onmouseleave="resetCard(this)">
+                    <div class="tilt-card-inner p-8 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all">
+                        <div class="tilt-icon text-5xl mb-6 inline-block">🌐</div>
+                        <h3 class="text-xl font-semibold mb-3">Front-End Development</h3>
+                        <p class="text-gray-400 mb-4">React, Vue, Angular, and modern JavaScript frameworks</p>
+                        <div class="skill-bar bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="skill-progress h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Card 2 -->
+                <div class="reveal tilt-card group" onmousemove="tiltCard(event, this)" onmouseleave="resetCard(this)">
+                    <div class="tilt-card-inner p-8 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all">
+                        <div class="tilt-icon text-5xl mb-6 inline-block">🎨</div>
+                        <h3 class="text-xl font-semibold mb-3">UI/UX Design</h3>
+                        <p class="text-gray-400 mb-4">Figma, Adobe XD, and design systems</p>
+                        <div class="skill-bar bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="skill-progress h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Card 3 -->
+                <div class="reveal tilt-card group" onmousemove="tiltCard(event, this)" onmouseleave="resetCard(this)">
+                    <div class="tilt-card-inner p-8 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all">
+                        <div class="tilt-icon text-5xl mb-6 inline-block">🔧</div>
+                        <h3 class="text-xl font-semibold mb-3">Back-End Development</h3>
+                        <p class="text-gray-400 mb-4">Node.js, Python, and database management</p>
+                        <div class="skill-bar bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="skill-progress h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Card 4 -->
+                <div class="reveal tilt-card group" onmousemove="tiltCard(event, this)" onmouseleave="resetCard(this)">
+                    <div class="tilt-card-inner p-8 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all">
+                        <div class="tilt-icon text-5xl mb-6 inline-block">📱</div>
+                        <h3 class="text-xl font-semibold mb-3">Mobile Development</h3>
+                        <p class="text-gray-400 mb-4">React Native and Flutter applications</p>
+                        <div class="skill-bar bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="skill-progress h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Card 5 -->
+                <div class="reveal tilt-card group" onmousemove="tiltCard(event, this)" onmouseleave="resetCard(this)">
+                    <div class="tilt-card-inner p-8 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all">
+                        <div class="tilt-icon text-5xl mb-6 inline-block">🎬</div>
+                        <h3 class="text-xl font-semibold mb-3">3D & Animation</h3>
+                        <p class="text-gray-400 mb-4">Three.js, WebGL, and motion graphics</p>
+                        <div class="skill-bar bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="skill-progress h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Card 6 -->
+                <div class="reveal tilt-card group" onmousemove="tiltCard(event, this)" onmouseleave="resetCard(this)">
+                    <div class="tilt-card-inner p-8 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all">
+                        <div class="tilt-icon text-5xl mb-6 inline-block">☁️</div>
+                        <h3 class="text-xl font-semibold mb-3">Cloud & DevOps</h3>
+                        <p class="text-gray-400 mb-4">AWS, Docker, and CI/CD pipelines</p>
+                        <div class="skill-bar bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="skill-progress h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 glow-text">Featured Projects</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="reveal flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-gradient-to-br from-purple-900 to-purple-700 p-6 flex flex-col justify-end">
+                            <div class="text-6xl mb-4">🛒</div>
+                            <h3 class="text-xl font-semibold">E-Commerce Platform</h3>
+                            <p class="text-gray-300">Full-stack online store</p>
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-pink-900 to-purple-900 p-6 flex flex-col justify-center items-center text-center">
+                            <h3 class="text-xl font-semibold mb-3">E-Commerce Platform</h3>
+                            <p class="text-gray-300 mb-4">Built with React, Node.js, and MongoDB. Features real-time inventory and payment processing.</p>
+                            <a href="#" class="px-6 py-2 bg-white/20 rounded-full hover:bg-white/30 transition-all">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="reveal flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-gradient-to-br from-blue-900 to-blue-700 p-6 flex flex-col justify-end">
+                            <div class="text-6xl mb-4">🎮</div>
+                            <h3 class="text-xl font-semibold">3D Game Portal</h3>
+                            <p class="text-gray-300">Interactive gaming platform</p>
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-blue-900 to-purple-900 p-6 flex flex-col justify-center items-center text-center">
+                            <h3 class="text-xl font-semibold mb-3">3D Game Portal</h3>
+                            <p class="text-gray-300 mb-4">WebGL-powered gaming platform with Three.js. Features multiplayer support and leaderboards.</p>
+                            <a href="#" class="px-6 py-2 bg-white/20 rounded-full hover:bg-white/30 transition-all">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="reveal flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-gradient-to-br from-green-900 to-teal-700 p-6 flex flex-col justify-end">
+                            <div class="text-6xl mb-4">📊</div>
+                            <h3 class="text-xl font-semibold">Analytics Dashboard</h3>
+                            <p class="text-gray-300">Data visualization tool</p>
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-green-900 to-purple-900 p-6 flex flex-col justify-center items-center text-center">
+                            <h3 class="text-xl font-semibold mb-3">Analytics Dashboard</h3>
+                            <p class="text-gray-300 mb-4">Real-time analytics with D3.js and Vue. Interactive charts and custom reporting.</p>
+                            <a href="#" class="px-6 py-2 bg-white/20 rounded-full hover:bg-white/30 transition-all">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="reveal flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-gradient-to-br from-orange-900 to-red-700 p-6 flex flex-col justify-end">
+                            <div class="text-6xl mb-4">🤖</div>
+                            <h3 class="text-xl font-semibold">AI Assistant</h3>
+                            <p class="text-gray-300">Machine learning chatbot</p>
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-orange-900 to-purple-900 p-6 flex flex-col justify-center items-center text-center">
+                            <h3 class="text-xl font-semibold mb-3">AI Assistant</h3>
+                            <p class="text-gray-300 mb-4">NLP-powered assistant using Python and TensorFlow. Context-aware conversations.</p>
+                            <a href="#" class="px-6 py-2 bg-white/20 rounded-full hover:bg-white/30 transition-all">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="reveal flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-gradient-to-br from-pink-900 to-rose-700 p-6 flex flex-col justify-end">
+                            <div class="text-6xl mb-4">🎵</div>
+                            <h3 class="text-xl font-semibold">Music Streaming App</h3>
+                            <p class="text-gray-300">Audio streaming platform</p>
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-pink-900 to-purple-900 p-6 flex flex-col justify-center items-center text-center">
+                            <h3 class="text-xl font-semibold mb-3">Music Streaming App</h3>
+                            <p class="text-gray-300 mb-4">React Native mobile app with audio streaming, playlists, and social features.</p>
+                            <a href="#" class="px-6 py-2 bg-white/20 rounded-full hover:bg-white/30 transition-all">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="reveal flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-gradient-to-br from-cyan-900 to-blue-700 p-6 flex flex-col justify-end">
+                            <div class="text-6xl mb-4">🏠</div>
+                            <h3 class="text-xl font-semibold">Smart Home Hub</h3>
+                            <p class="text-gray-300">IoT control center</p>
+                        </div>
+                        <div class="flip-card-back bg-gradient-to-br from-cyan-900 to-purple-900 p-6 flex flex-col justify-center items-center text-center">
+                            <h3 class="text-xl font-semibold mb-3">Smart Home Hub</h3>
+                            <p class="text-gray-300 mb-4">IoT dashboard for smart home devices. Voice control and automation rules.</p>
+                            <a href="#" class="px-6 py-2 bg-white/20 rounded-full hover:bg-white/30 transition-all">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 glow-text">Get In Touch</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-6 text-lg">Have a project in mind? Let's create something amazing together.</p>
+            </div>
+            
+            <div class="reveal perspective-container">
+                <form class="card-3d bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10" id="contactForm">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2">Your Name</label>
+                            <input type="text" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:border-purple-500 focus:outline-none transition-colors" placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2">Your Email</label>
+                            <input type="email" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:border-purple-500 focus:outline-none transition-colors" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm text-gray-400 mb-2">Subject</label>
+                        <input type="text" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:border-purple-500 focus:outline-none transition-colors" placeholder="Project Inquiry" required>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm text-gray-400 mb-2">Message</label>
+                        <textarea rows="5" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:border-purple-500 focus:outline-none transition-colors resize-none" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all transform hover:scale-[1.02]">
+                        Send Message ✨
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="reveal flex justify-center gap-6 mt-12">
+                <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all transform hover:scale-110 hover:-translate-y-1">
+                    <span class="text-xl">📧</span>
+                </a>
+                <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all transform hover:scale-110 hover:-translate-y-1">
+                    <span class="text-xl">💼</span>
+                </a>
+                <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all transform hover:scale-110 hover:-translate-y-1">
+                    <span class="text-xl">🐱</span>
+                </a>
+                <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-600 transition-all transform hover:scale-110 hover:-translate-y-1">
+                    <span class="text-xl">🐦</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-400">
+            <p>© 2024 Alex Portfolio. Crafted with 💜 and lots of CSS.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
